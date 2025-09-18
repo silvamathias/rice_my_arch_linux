@@ -1,0 +1,1 @@
+# rice_my_arch_linux
