@@ -1,0 +1,239 @@
+@import "cor.css";
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    /*margin-left: 2.5px;*/
+    /*margin-right: 2.5px;*/
+
+    /*file:///home/retrogame/.config/waybar/index.html*/
+}
+
+h1{
+   font-size: 20px; 
+}
+
+h3{
+    font-size: 15px;
+}
+
+td{
+    text-align: center;
+}
+p{
+padding: 10px;
+width: 280px;
+height: 25px;
+text-align: center;
+}
+
+table{
+    background-color: rgb(175, 175, 175);
+}
+
+.contraste{
+background-image: linear-gradient(to right, black, white);
+}
+.prisma{
+background-image: linear-gradient(to right, black, blue, purple,red,orange,yellow,green);
+}
+.background{
+background-color: var(--background);
+color: var(--error);
+}
+.error{
+background-color: var(--error);
+color: var(--error_container);
+}
+.inverse_on_surface{
+background-color: var(--inverse_on_surface);
+color: var(--error);
+}
+.error_container{
+background-color: var(--error_container);
+color: var(--error);
+}
+.inverse_primary{
+background-color: var(--inverse_primary);
+color: var(--error);
+}
+.inverse_surface{
+background-color: var(--inverse_surface);
+color: var(--error);
+}
+.on_background{
+background-color: var(--on_background);
+color: var(--error);
+}
+.on_error{
+background-color: var(--on_error);
+color: var(--error);
+}
+.on_error_container{
+background-color: var(--on_error_container);
+color: var(--error);
+}
+.on_primary{
+background-color: var(--on_primary);
+color: var(--error);
+}
+.on_primary_container{
+background-color: var(--on_primary_container);
+color: var(--error);
+}
+.on_primary_fixed{
+background-color: var(--on_primary_fixed);
+color: var(--error);
+}
+.on_primary_fixed_variant{
+background-color: var(--on_primary_fixed_variant);
+color: var(--error);
+}
+.on_secondary{
+background-color: var(--on_secondary);
+color: var(--error);
+}
+.on_secondary_container{
+background-color: var(--on_secondary_container);
+color: var(--error);
+}
+.on_secondary_fixed{
+background-color: var(--on_secondary_fixed);
+color: var(--error);
+}
+.on_secondary_fixed_variant{
+background-color: var(--on_secondary_fixed_variant);
+color: var(--error);
+}
+.on_surface{
+background-color: var(--on_surface);
+color: var(--error);
+}
+.on_surface_variant{
+background-color: var(--on_surface_variant);
+color: var(--error);
+}
+.on_tertiary{
+background-color: var(--on_tertiary);
+color: var(--error);
+}
+.on_tertiary_container{
+background-color: var(--on_tertiary_container);
+color: var(--error);
+}
+.on_tertiary_fixed{
+background-color: var(--on_tertiary_fixed);
+color: var(--error);
+}
+.on_tertiary_fixed_variant{
+background-color: var(--on_tertiary_fixed_variant);
+color: var(--error);
+}
+.outline{
+background-color: var(--outline);
+color: var(--error);
+}
+.outline_variant{
+background-color: var(--outline_variant);
+color: var(--error);
+}
+.primary{
+background-color: var(--primary);
+color: var(--error);
+}
+.primary_container{
+background-color: var(--primary_container);
+color: var(--error);
+}
+.primary_fixed{
+background-color: var(--primary_fixed);
+color: var(--error);
+}
+.primary_fixed_dim{
+background-color: var(--primary_fixed_dim);
+color: var(--error);
+}
+.scrim{
+background-color: var(--scrim);
+color: var(--error);
+}
+.secondary{
+background-color: var(--secondary);
+color: var(--error);
+}
+.secondary_container{
+background-color: var(--secondary_container);
+color: var(--error);
+}
+.secondary_fixed{
+background-color: var(--secondary_fixed);
+color: var(--error);
+}
+.secondary_fixed_dim{
+background-color: var(--secondary_fixed_dim);
+color: var(--error);
+}
+.shadow{
+background-color: var(--shadow);
+color: var(--error);
+}
+.source_color{
+background-color: var(--source_color);
+color: var(--error);
+}
+.surface{
+background-color: var(--surface);
+color: var(--error);
+}
+.surface_bright{
+background-color: var(--surface_bright);
+color: var(--error);
+}
+.surface_container{
+background-color: var(--surface_container);
+color: var(--error);
+}
+.surface_container_high{
+background-color: var(--surface_container_high);
+color: var(--error);
+}
+.surface_container_highest{
+background-color: var(--surface_container_highest);
+color: var(--error);
+}
+.surface_container_low{
+background-color: var(--surface_container_low);
+color: var(--error);
+}
+.surface_container_lowest{
+background-color: var(--surface_container_lowest);
+color: var(--error);
+}
+.surface_dim{
+background-color: var(--surface_dim);
+color: var(--error);
+}
+.surface_tint{
+background-color: var(--surface_tint);
+color: var(--error);
+}
+.surface_variant{
+background-color: var(--surface_variant);
+color: var(--tertiary);
+}
+.tertiary{
+background-color: var(--tertiary);
+color: var(--tertiary_container);
+}
+.tertiary_container{
+background-color: var(--tertiary_container);
+color: var(--tertiary_fixed);
+}
+.tertiary_fixed{
+background-color: var(--tertiary_fixed);
+color: var(--tertiary_fixed_dim);
+}
+.tertiary_fixed_dim{
+background-color: var(--tertiary_fixed_dim);
+color: var(--error);
+}

@@ -1,0 +1,325 @@
+/*@import '../sys_colors/color_style.css';*/
+@import "colors.css";
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    /*margin-left: 2.5px;*/
+    /*margin-right: 2.5px;*/
+}
+
+window#waybar {
+    background-color: rgba(26,25,37,0.8);
+    /*opacity: 0.5;*/
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    color: @primary;
+    transition-property: background-color;
+    transition-duration: .4s;
+    border-radius: 20px;
+}
+
+window#waybar {
+     /*background-color: transparent;*/
+}
+window#waybar.modules-center {
+    opacity: 1;
+
+}
+
+window#waybar.modules-left {
+    opacity: 1;
+    margin-left: 0;
+}
+
+window#waybar.modules-right {
+    opacity: 1;
+    margin-right: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+/*====HOVER================================================================================*/
+/* you can set a style on hover for any module like this */
+#network:hover {
+    background: @inverse_primary;
+    color: @inverse_on_surface;
+}
+#cpu:hover {
+    background: @inverse_primary;
+    color: @inverse_on_surface;
+}
+
+#memory:hover {
+    background: @inverse_primary;
+    color: @inverse_on_surface;
+}
+
+#temperature:hover {
+    background: @inverse_primary;
+    color: @inverse_on_surface;
+}
+
+#clock:hover {
+    background: @inverse_primary;
+    color: @inverse_on_surface;
+}
+
+
+#pulseaudio:hover {
+    background: @inverse_primary;
+    color: @inverse_on_surface;
+}
+
+/*=========================================================================================*/
+#workspaces button {
+    background-color: @secondary;
+    color: @secondary_container;
+    margin: 3px;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+#workspaces button.visible {
+    background-color: @tertiary_container;
+    color: @tertiary;
+    opacity: 1;
+}
+
+
+#workspaces button.urgent {
+    background-color: @on_error;
+}
+
+#workspaces button.empty {
+    color: @on_error;
+    
+}
+
+#taskbar {
+    background-color: @tertiary_container;
+    margin: 3px;
+    border-radius: 50px;
+    opacity: 1;
+
+}
+
+#taskbar button{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 50px;
+}
+
+#clock {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 20px;
+    margin: 4px;
+    opacity: 1;
+    padding: 0 10px;
+}
+
+#battery {
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#battery.charging, #battery.plugged {
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+@keyframes blink {
+    to {
+        background-color: @secondary;
+    color: @secondary_container;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: @secondary;
+    color: @secondary_container;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+    border-radius: 20px;
+    margin: 4px;
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @secondary;
+    color: @secondary_container;
+    background: #000000;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin: 4px;
+    background: #000000;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: @secondary;
+    color: @secondary_container;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin: 4px;
+    background: #000000;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: @secondary;
+    color: @secondary_container;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin: 4px;
+    background: #000000;
+}
+
+label:focus {
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#cpu {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 0 10px;
+    opacity: 1;
+}
+
+#memory {
+    background-color:@secondary;
+    color: @secondary_container;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 0 10px;
+}
+
+#disk {
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#backlight {
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#network {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 20px;
+    margin: 4px;
+    padding: 0 10px;
+}
+
+#network.disconnected {
+    background-color: @error;
+    color: @error_container;
+}
+
+#pulseaudio {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 20px;
+    margin: 4px;
+    opacity: 1;
+    padding: 0 10px
+
+}
+
+#pulseaudio.muted {
+     background-color: @error;
+    color: @error_container;
+    padding: 0 10px;
+}
+
+#wireplumber {
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#temperature {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 20px;
+    margin: 4px;
+    padding: 0 10px;
+}
+
+#temperature.critical {
+    background-color: @error;
+    color: @error_container;
+}
+
+#tray {
+    background-color: @secondary;
+    color: @secondary_container;
+    margin: 4px;
+}
+
+#idle_inhibitor {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+#idle_inhibitor.activated {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    background-color: @secondary;
+    color: @secondary_container;
+}
+
+#privacy-item.screenshare {
+    background-color: @error;
+    color: @error_container;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: @error;
+    color: @error_container;
+}
+#custom.power {
+    padding-right: 15px;
+    border-radius: 20px;
+    margin: 4px;
+    /*border: 2px;*/
+    background-color: @error;
+    color: @error_container;
+    padding: 0 10px;
+}
